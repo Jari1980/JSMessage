@@ -1,0 +1,8 @@
+# This is added in order to 
+# 1, reduce size
+# 2, avoid broken dependencies
+# 3, faster builds
+# 4, avoid cache issues
+
+node_modules
+npm-debug.log
