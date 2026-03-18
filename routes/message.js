@@ -5,7 +5,7 @@ const Message = require("../models/Message");
 //GET all messages
 router.get("/messages", async (req, res) => {
     try {
-        const messages = (await Message.find()).toSorted({createdAt: -1});
+        const messages = await Message.find().sort('-createdAt');
         res.json(messages);
     } catch(err){
         res.status(500).json({error: err.message});
